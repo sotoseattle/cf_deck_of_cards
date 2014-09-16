@@ -1,4 +1,4 @@
 require 'rspec'
 
 require './lib/card'
-require './lib/deckofcards'
+require './lib/deck_of_cards'

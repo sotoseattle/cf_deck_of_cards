@@ -1,3 +1,5 @@
+# Card: a simple object with two characteristics: suite and rank
+# It knows at the class level which are the valid suites and ranks
 class Card
   attr_reader :suite, :rank
 
@@ -5,8 +7,8 @@ class Card
     suite = preformat(options[:suite])
     rank  = preformat(options[:rank])
 
-    raise ArgumentError, "Wrong Suite" unless Card.all_suites.include? suite
-    raise ArgumentError, "Wrong Rank"  unless Card.all_ranks.include? rank
+    fail ArgumentError, 'Wrong Suite' unless Card.all_suites.include? suite
+    fail ArgumentError, 'Wrong Rank'  unless Card.all_ranks.include? rank
 
     @suite = options[:suite]
     @rank  = options[:rank]
@@ -17,10 +19,9 @@ class Card
   end
 
   def self.all_suites
-    %w{Clubs Diamonds Hearts Spades}
+    %w(Clubs Diamonds Hearts Spades)
   end
   def self.all_ranks
-    %w{Ace 2 3 4 5 6 7 8 9 10 Jack Queen King}
+    %w(Ace 2 3 4 5 6 7 8 9 10 Jack Queen King)
   end
 end
-
