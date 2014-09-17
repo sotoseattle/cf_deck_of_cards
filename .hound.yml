@@ -1,0 +1,4 @@
+AllCops:
+
+Style/EnforceLiterals:
+  EnforcedStyle: single_quotes
