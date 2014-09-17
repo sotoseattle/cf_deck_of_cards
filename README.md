@@ -23,3 +23,4 @@ Instead of Minitest and rake I have used RSpec so I keep exploring the available
 ### Best Practices
 
 I have run Rubocop and modified the code accordingly.
+
